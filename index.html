@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Ghosh Dastidar — Financial &amp; Data Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F3;
+    --ink:#1F2937;
+    --navy:#0F2A43;
+    --amber:#B9812A;
+    --line:#DAD3C2;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+
+  header.hero{
+    padding:88px 0 56px;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:'Source Serif 4',serif;
+    font-weight:700;
+    font-size:clamp(32px,5vw,48px);
+    margin:0 0 14px;
+    color:var(--navy);
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-size:17px;
+    color:#4B5563;
+    max-width:560px;
+    margin:0 0 26px;
+  }
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .pill{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    padding:7px 14px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    color:var(--navy);
+    text-decoration:none;
+    background:var(--card);
+  }
+  .pill:hover{border-color:var(--amber);color:var(--amber);}
+
+  section{padding:56px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+
+  .section-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:8px;
+  }
+  h2{
+    font-family:'Source Serif 4',serif;
+    font-size:28px;
+    color:var(--navy);
+    margin:0 0 20px;
+  }
+  p{margin:0 0 16px;color:#374151;}
+
+  /* Ledger stat strip — the signature element */
+  .ledger{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+    background:var(--card);
+    margin:28px 0 8px;
+  }
+  .ledger div{
+    padding:20px 14px;
+    text-align:center;
+    border-right:1px solid var(--line);
+  }
+  .ledger div:last-child{border-right:none;}
+  .ledger .num{
+    font-family:'Source Serif 4',serif;
+    font-weight:700;
+    font-size:26px;
+    color:var(--navy);
+    display:block;
+  }
+  .ledger .lbl{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#6B7280;
+    display:block;
+    margin-top:4px;
+  }
+  .ledger-note{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:#9CA3AF;
+    margin-top:6px;
+  }
+
+  ul.takeaways{margin:0 0 20px;padding-left:0;list-style:none;}
+  ul.takeaways li{
+    position:relative;
+    padding-left:28px;
+    margin-bottom:14px;
+    color:#374151;
+  }
+  ul.takeaways li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--amber);
+  }
+
+  .downloads{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px;}
+  .dl-card{
+    flex:1 1 220px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    background:var(--card);
+    padding:20px;
+    text-decoration:none;
+    display:block;
+  }
+  .dl-card:hover{border-color:var(--navy);}
+  .dl-kind{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:6px;
+  }
+  .dl-title{
+    font-family:'Source Serif 4',serif;
+    font-size:19px;
+    color:var(--navy);
+    margin-bottom:6px;
+  }
+  .dl-desc{font-size:14px;color:#6B7280;margin:0;}
+
+  footer{padding:40px 0 64px;}
+  .note{
+    font-size:13px;
+    color:#9CA3AF;
+    border-top:1px solid var(--line);
+    padding-top:20px;
+    margin-top:8px;
+  }
+
+  @media(max-width:600px){
+    .ledger{grid-template-columns:repeat(2,1fr);}
+    .ledger div:nth-child(2){border-right:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div class="eyebrow">Financial &amp; Data Analysis Portfolio</div>
+  <h1>Aditya Ghosh Dastidar</h1>
+  <p class="role">B.Tech CSE graduate working toward MIS Analyst, Junior Research Analyst, and Financial Data Analyst roles. Background in Excel-based financial modelling, ratio analysis, and SQL.</p>
+  <div class="contact-row">
+    <a class="pill" href="mailto:bua1997igd@gmail.com">bua1997igd@gmail.com</a>
+    <a class="pill" href="#project">View Project ↓</a>
+  </div>
+</header>
+
+<section id="project" class="wrap">
+  <div class="section-label">Featured Project</div>
+  <h2>Asian Paints — What 10 Years of Data Tells Us</h2>
+  <p>A full 10-year financial analysis of Asian Paints, built from raw balance sheet, income statement, and cash flow data — with ratio analysis, trend spotting, and a competitor comparison against Berger Paints and Kansai Nerolac.</p>
+
+  <div class="ledger">
+    <div><span class="num">29.7%</span><span class="lbl">ROE, FY24</span></div>
+    <div><span class="num">31.8%</span><span class="lbl">ROCE, FY24</span></div>
+    <div><span class="num">15.7%</span><span class="lbl">Net Margin, FY24</span></div>
+    <div><span class="num">39</span><span class="lbl">Debtor Days, FY24</span></div>
+  </div>
+  <p class="ledger-note">All figures independently calculated from public Screener.in and annual report data — see the full model below.</p>
+</section>
+
+<section class="wrap">
+  <div class="section-label">Quick Takeaways</div>
+  <ul class="takeaways">
+    <li>Asian Paints consistently generated strong profitability, with ROE reaching 29.7% in FY 2024 — among the highest in its sector.</li>
+    <li>Revenue grew consistently over the decade, though profit growth was not always as smooth, recovering to a 15.7% net margin by FY 2024.</li>
+    <li>Investing activity grew sharply, from ₹465 crore in FY 2015 to ₹2,548 crore in FY 2024, funded by a manageable rise in borrowings.</li>
+    <li>Asian Paints held a clear competitive edge over Berger Paints and Kansai Nerolac on ROE, margins, and debtor days.</li>
+    <li>The open question: can these returns hold as the company keeps expanding into new categories and geographies?</li>
+  </ul>
+
+  <div class="downloads">
+    <a class="dl-card" href="asian-paints-analysis.pdf">
+      <div class="dl-kind">PDF</div>
+      <div class="dl-title">Read the Full Article</div>
+      <p class="dl-desc">Business overview, financial trends, competitive position, and analysis.</p>
+    </a>
+    <a class="dl-card" href="asian-paints-financial-model.xlsx">
+      <div class="dl-kind">XLSX</div>
+      <div class="dl-title">Download the Financial Model</div>
+      <p class="dl-desc">10-year balance sheet, income statement, cash flow, ratios, and comparison table — fully formula-driven.</p>
+    </a>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p class="note">This project was completed as part of an independent professional development program in financial analysis.</p>
+</footer>
+
+</body>
+</html>
